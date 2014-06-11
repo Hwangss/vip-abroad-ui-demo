@@ -1,4 +1,4 @@
-// @use : abroad my drop down
+// @use : abroad my modal
 // @editor : mss.huang
 // @last modified time : 2014.6.10
 // @verson : 1.0
@@ -8,7 +8,7 @@
    @require Button '/framework/components/button.styl'
    ========================================================================== */
 
-.ui-pops
+.ui-modal
     position fixed
     z-index 100
     top 30%
@@ -22,10 +22,10 @@
     visibility hidden
     transform translateY(-20px)
     transition .5s
-:root .ui-pops
+:root .ui-modal
     filter none
 
-.ui-pops-inner
+.ui-modal-inner
     position relative
     background-color #fff
     padding 35px 40px
@@ -51,12 +51,12 @@
             margin-right 5px
 
 // animation pop fade
-.ani-pops-in
+.ani-modal-in
     opacity 1
     visibility visible
     transform translateY(0)
 
-.ui-pops-mask
+.ui-modal-mask
     display none
     position fixed
     left 0
