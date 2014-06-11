@@ -1,0 +1,102 @@
+// @use : abroad my like goods
+// @editor : mss.huang
+// @last modified time : 2014.6.9
+// @verson : 1.0
+
+// animation
+@keyframes likeHover{
+    25%,75% {
+        transform scale(1.2)
+    }
+    50% {
+        transform scale(.8)
+    }
+}
+
+@keyframes likeFadeIn{
+    0% {
+        transform scale(2)
+        opacity 0
+    }
+    100% {
+        transform scale(1)
+        opacity 1
+    }
+}
+
+@keyframes likeFadeOut{
+    100% {
+        transform scale(2)
+        opacity 0
+    }
+}
+
+@keyframes tremble{
+    25% {
+        transform rotate(7deg)
+    }
+    75% {
+        transform rotate(-7deg)
+    }
+}
+
+// layout
+.ui-like
+    display inline-block
+    position relative
+    width 16px
+    height 15px
+    .icon
+        display inline-block
+        sprite($like)
+        &:hover
+            spritePosition($like-hover)
+            animation likeHover 5s infinite
+    .icon:active
+    &.z-liked .icon
+        spritePosition($like-already)
+    &.z-liked
+        .icon
+            &:hover
+                animation tremble .2s infinite
+            &:active
+                spritePosition($like)
+    &.ani-like-FadeIn
+        .icon
+            animation likeFadeIn 1s!important
+    &.ani-like-FadeOut
+        .icon
+            animation likeFadeOut 1s!important
+    .ui-tooltips
+        display block
+        position relative
+        left -50%
+        white-space nowrap
+    .text
+        display none
+    &:hover
+        .ui-like-tips-wrap
+        .like
+            display block
+    &.z-active
+        .like
+            display none
+        .liked
+            display block
+    &.z-liked:hover
+        .like
+            display none
+        .unliked
+            display block
+    &.z-liked.z-active
+        .liked
+        .unliked
+            display none
+        .canceled
+            display block
+
+.ui-like-tips-wrap
+    position absolute
+    display none
+    left 50%
+    top 25px

@@ -1,0 +1,53 @@
+$like-already_x = 0px;
+$like-already_y = 0px;
+$like-already_offset_x = 0px;
+$like-already_offset_y = 0px;
+$like-already_width = 16px;
+$like-already_height = 15px;
+$like-already_total_width = 37px;
+$like-already_total_height = 35px;
+$like-already_image = '{$imgDomain}/abroad/framework/bases/sprite.png';
+$like-already = 0px 0px 0px 0px 16px 15px 37px 35px '{$imgDomain}/abroad/framework/bases/sprite.png';
+$like-hover_x = 21px;
+$like-hover_y = 0px;
+$like-hover_offset_x = -21px;
+$like-hover_offset_y = 0px;
+$like-hover_width = 16px;
+$like-hover_height = 15px;
+$like-hover_total_width = 37px;
+$like-hover_total_height = 35px;
+$like-hover_image = '{$imgDomain}/abroad/framework/bases/sprite.png';
+$like-hover = 21px 0px -21px 0px 16px 15px 37px 35px '{$imgDomain}/abroad/framework/bases/sprite.png';
+$like_x = 0px;
+$like_y = 20px;
+$like_offset_x = 0px;
+$like_offset_y = -20px;
+$like_width = 16px;
+$like_height = 15px;
+$like_total_width = 37px;
+$like_total_height = 35px;
+$like_image = '{$imgDomain}/abroad/framework/bases/sprite.png';
+$like = 0px 20px 0px -20px 16px 15px 37px 35px '{$imgDomain}/abroad/framework/bases/sprite.png';
+
+spriteWidth($sprite) {
+  width: $sprite[4];
+}
+
+spriteHeight($sprite) {
+  height: $sprite[5];
+}
+
+spritePosition($sprite) {
+  background-position: $sprite[2] $sprite[3];
+}
+
+spriteImage($sprite) {
+  background-image: url($sprite[8]);
+}
+
+sprite($sprite) {
+  spriteImage($sprite)
+  spritePosition($sprite)
+  spriteWidth($sprite)
+  spriteHeight($sprite)
+}

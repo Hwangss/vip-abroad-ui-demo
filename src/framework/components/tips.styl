@@ -1,0 +1,61 @@
+/* ============================================================================
+   Tips
+     1. tiptext
+     2. tips
+   @require Iconfont 'framework/bases/partials/iconfont.styl'
+   ========================================================================== */
+
+/**
+ * Tips Base
+ * X: info, warning, error, success
+ * <p class="ui-tiptext-X"><i class="iconfont iconfont-16">tip text</p>
+ */
+$tips-base
+    position relative
+    padding-left 26px
+    color #2a2a2a
+
+    .iconfont
+        position absolute
+        top 1px
+        left 0
+
+
+/**
+ * Tips info
+ */
+.ui-tips-info
+    @extend $tips-base
+
+    .iconfont
+        @extend .iconfont-info
+
+
+/**
+ * Tips Warning
+ */
+.ui-tips-warning
+    @extend $tips-base
+
+    .iconfont
+        @extend .iconfont-warning
+
+
+/**
+ * Tips Error
+ */
+.ui-tips-error
+    @extend $tips-base
+
+    .iconfont
+        @extend .iconfont-error
+
+
+/**
+ * Tips Success
+ */
+.ui-tips-success
+    @extend $tips-base
+
+    .iconfont
+        @extend .iconfont-success

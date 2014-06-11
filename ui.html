@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="zh">
+    <head>
+        <meta http-equiv="x-dns-prefetch-control" content="on"/>
+        <meta charset="utf-8" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="format-detection" content="telephone=no"/>
+        <meta name="format-detection" content="address=no"/>
+        <meta name="viewport" content="width=device-width,minimal-ui">
+        <title>title</title>
+        <meta name="keywords" content="keywords" />
+        <meta name="description" content="description" />
+        <!-- only can link 2 css -->
+        <link href="css/common.css" rel="stylesheet" type="text/css" />
+        <!-- only can link 2 js -->
+        <script src="http://s2.vipstatic.com/js/public/jquery.js" type="text/javascript"></script>
+        <script src="http://s2.vipstatic.com/js/public/core2.js" type="text/javascript"></script>
+        <script src="js/prettify.js"></script>
+        <style>.prettyprint{display:block;margin:1em 0;background:#f7f7f9;font-family:Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;font-size:12px;line-height:1.5;padding:10px;border:1px solid #e2e2e2;}.pln{color:#333333;}@media screen{.str{color:#dd1144;}.kwd{color:#333333;}.com{color:#999988;}.typ{color:#445588;}.lit{color:#445588;}.pun{color:#333333;}.opn{color:#333333;}.clo{color:#333333;}.tag{color:navy;}.atn{color:teal;}.atv{color:#dd1144;}.dec{color:#333333;}.var{color:teal;}.fun{color:#990000;}}@media print,projection{.str{color:#006600;}.kwd{color:#006;font-weight:bold;}.com{color:#600;font-style:italic;}.typ{color:#404;font-weight:bold;}.lit{color:#004444;}.pun,.opn,.clo{color:#444400;}.tag{color:#006;font-weight:bold;}.atn{color:#440044;}.atv{color:#006600;}}ol.linenums{margin-top:0;margin-bottom:0;}li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9{}li.L1,li.L3,li.L5,li.L7,li.L9{}
+            .case>div{display: block;}h2{margin-bottom: 10px;}
+        </style>
+    </head>
+<body class="device-pc">
+    <headder class="g-header" role="tooltip">
+        <div class="g-wrap">
+            我是个打酱油的nav
+        </div><br>
+    </headder>
+    <div class="g-main" role="main">
+        <!-- 如有头尾大背景可把多加一层.g-main-inner来包裹 -->
+        <div class="g-wrap">
+            <h2>1、按钮</h2>
+            <p>按钮分成大、中、小、迷你的size，而皮肤分别对应强操作、操作、弱操作三种（有loading操作的按钮结构不同），为了优化ipad版本，需在有操作的按钮增加data-touch的属性，通过js来增加touch类来替代hover，具体看<a href="http://jsbin.com/gonufaca/1" target="_blank">http://jsbin.com/gonufaca/1</a></p>
+            <p>类的话，如下代码所示：</p><br>
+            <button class="ui-btn-large ui-btn-primary" data-touch>Button</button>
+            <button class="ui-btn-large ui-btn-disabled" data-touch>Button</button>
+            <button class="ui-btn-large ui-btn-primary test-btn" data-touch>
+                <span class="txt">Button</span>
+                <span class="ui-btn-loading"><em>Loading...</em></span>
+            </button>
+            ←点我点我
+            <code class="prettyprint">
+                &lt;button class="ui-btn-large ui-btn-primary" data-touch&gt;Button&lt;/button&gt;<br>
+                &lt;button class="ui-btn-large ui-btn-disabled" data-touch&gt;Button&lt;/button&gt;<br>
+                &lt;button class="ui-btn-large ui-btn-primary" data-touch&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="txt"&gt;Button&lt;/span&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="ui-btn-loading"&gt;&lt;i class="icon"&gt;&lt;/i&gt;&lt;em&gt;Loading...&lt;/em&gt;&lt;/span&gt;<br>
+                &lt;/button&gt;
+            </code><br>
+            <button class="ui-btn-medium ui-btn-secondary" data-touch>Button</button>
+            <button class="ui-btn-medium ui-btn-default" data-touch>Button</button>
+            <button class="ui-btn-medium ui-btn-disabled" data-touch>Button</button>
+            <button class="ui-btn-medium ui-btn-secondary test-btn" data-touch>
+                <span class="txt">Button</span>
+                <span class="ui-btn-loading"></span>
+            </button>
+            ←点我点我
+            <code class="prettyprint">
+                &lt;button class="ui-btn-medium ui-btn-secondary" data-touch&gt;Button&lt;/button&gt;<br>
+                &lt;button class="ui-btn-medium ui-btn-default" data-touch&gt;Button&lt;/button&gt;<br>
+                &lt;button class="ui-btn-medium ui-btn-disabled" data-touch&gt;Button&lt;/button&gt;<br>
+                &lt;button class="ui-btn-medium ui-btn-secondary" data-touch&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="txt"&gt;Button&lt;/span&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="ui-btn-loading"&gt;&lt;i class="icon"&gt;&lt;/i&gt;&lt;/span&gt;<br>
+                &lt;/button&gt;
+            </code>
+            <button class="ui-btn-small ui-btn-secondary" data-touch>Button</button>
+            <button class="ui-btn-small ui-btn-default" data-touch>Button</button>
+            <button class="ui-btn-small ui-btn-disabled" data-touch>Button</button>
+            <button class="ui-btn-small ui-btn-secondary test-btn" data-touch>
+                <span class="txt">Button</span>
+                <span class="ui-btn-loading"></span>
+            </button>
+            ←点我点我
+            <code class="prettyprint">
+                &lt;button class="ui-btn-small ui-btn-secondary" data-touch&gt;Button&lt;/button&gt;<br>
+                &lt;button class="ui-btn-small ui-btn-default" data-touch&gt;Button&lt;/button&gt;<br>
+                &lt;button class="ui-btn-small ui-btn-disabled" data-touch&gt;Button&lt;/button&gt;<br>
+                &lt;button class="ui-btn-small ui-btn-secondary test-btn" data-touch&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="txt"&gt;Button&lt;/span&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="ui-btn-loading"&gt;&lt;/span&gt;<br>
+                &lt;/button&gt;
+            </code>
+            <button class="ui-btn-mini ui-btn-secondary" data-touch>Button</button>
+            <button class="ui-btn-mini ui-btn-default" data-touch>Button</button>
+            <button class="ui-btn-mini ui-btn-disabled" data-touch>Button</button>
+            <button class="ui-btn-mini ui-btn-secondary test-btn" data-touch>
+                <span class="txt">Button</span>
+                <span class="ui-btn-loading"></span>
+            </button>
+            ←点我点我
+            <code class="prettyprint">
+                &lt;button class="ui-btn-mini ui-btn-secondary" data-touch&gt;Button&lt;/button&gt;<br>
+                &lt;button class="ui-btn-mini ui-btn-default" data-touch&gt;Button&lt;/button&gt;<br>
+                &lt;button class="ui-btn-mini ui-btn-disabled" data-touch&gt;Button&lt;/button&gt;<br>
+                &lt;button class="ui-btn-mini ui-btn-secondary test-btn" data-touch&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="txt"&gt;Button&lt;/span&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="ui-btn-loading"&gt;&lt;/span&gt;<br>
+                &lt;/button&gt;
+            </code>
+            <h2>2、提示</h2>
+            <p>箭头部分可以按需求换成top、right、bottom、left,for example:ui-tooltips-arrows-top</p>
+            <div class="case"><br>
+                <div class="ui-tooltips ui-tooltips-arrows-top">
+                    <p class="text">提示文字</p>
+                </div><br><br>
+                <div class="ui-tooltips-info ui-tooltips-arrows-right">
+                    <p class="text">提示文字</p>
+                </div><br><br>
+                <div class="ui-tooltips-warning ui-tooltips-arrows-bottom">
+                    <p class="text">提示文字</p>
+                </div><br><br>
+                <div class="ui-tooltips-error ui-tooltips-arrows-left">
+                    <p class="text">提示文字</p>
+                </div><br><br>
+                <div class="ui-tooltips-success ui-tooltips-arrows-top">
+                    <p class="text">提示文字</p>
+                </div><br><br>
+                <div class="ui-tooltips-success ui-tooltips-arrows-top" style="width:300px;">
+                    <p class="ui-tips-success"><i class="iconfont iconfont-16"></i>tip text</p>
+                    <a class="ui-button-close" href="javascript:;" rel="nofollow" role="button">&times;</a>
+                </div><br><br>
+                <div class="ui-tooltips-success" style="width:300px;">
+                    <p class="ui-tips-success"><i class="iconfont iconfont-16"></i>tip text</p>
+                    <a class="ui-button-close" href="javascript:;" rel="nofollow" role="button">&times;</a>
+                </div><br>
+                <p class="ui-tips-success"><i class="iconfont iconfont-16"></i>tip text</p>
+            </div>
+            <code class="prettyprint">
+                &lt;div class="ui-tooltips ui-tooltips-arrows-top"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="text"&gt;提示文字&lt;/p&gt;<br>
+                &lt;/div&gt;<br>
+                &lt;div class="ui-tooltips-info ui-tooltips-arrows-right"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="text"&gt;提示文字&lt;/p&gt;<br>
+                &lt;/div&gt;<br>
+                &lt;div class="ui-tooltips-warning ui-tooltips-arrows-bottom"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="text"&gt;提示文字&lt;/p&gt;<br>
+                &lt;/div&gt;<br>
+                &lt;div class="ui-tooltips-error ui-tooltips-arrows-left"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="text"&gt;提示文字&lt;/p&gt;<br>
+                &lt;/div&gt;<br>
+                &lt;div class="ui-tooltips-success ui-tooltips-arrows-top"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="text"&gt;提示文字&lt;/p&gt;<br>
+                &lt;/div&gt;<br>
+                &lt;div class="ui-tooltips-success ui-tooltips-arrows-top" style="width:300px;"&gt;//宽度请自行添加否则自适应<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="ui-tiptext-success"&gt;&lt;i class="iconfont iconfont-16"&gt;&lt;/i&gt;tip text&lt;/p&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="ui-button-close" href="javascript:;" rel="nofollow" role="button"&gt;&amp;times;&lt;/a&gt;<br>
+                &lt;/div&gt;<br>
+                &lt;div class="ui-tooltips-success" style="width:300px;"&gt;//宽度请自行添加否则自适应，不要箭头就取消类<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="ui-tips-success"&gt;&lt;i class="iconfont iconfont-16"&gt;&lt;/i&gt;tip text&lt;/p&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="ui-button-close" href="javascript:;" rel="nofollow" role="button"&gt;&amp;times;&lt;/a&gt;<br>
+                &lt;/div&gt;&lt;br&gt;<br>
+                &lt;p class="ui-tips-success"&gt;&lt;i class="iconfont iconfont-16"&gt;&lt;/i&gt;tip text&lt;/p&gt;//外边框不要的话只需要用里面的内容单独存在<br>
+            </code>
+            <h2>3、我喜欢</h2>
+            <p></p>
+            <a href="javascript:;" role="button" class="ui-like z-active">
+                <i class="icon"></i>
+                <div class="ui-like-tips-wrap">
+                    <div class="ui-tooltips ui-tooltips-arrows-top">
+                        <p class="text like">Like</p>
+                        <p class="text liked">Liked</p>
+                        <p class="text unliked">Unliked</p>
+                        <p class="text canceled">Canceled</p>
+                    </div>
+                </div>
+            </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="javascript:;" role="button" class="ui-like z-liked">
+                <i class="icon"></i>
+                <div class="ui-like-tips-wrap">
+                    <div class="ui-tooltips ui-tooltips-arrows-top">
+                        <p class="text like">Like</p>
+                        <p class="text liked">Liked</p>
+                        <p class="text unliked">Unliked</p>
+                        <p class="text canceled">Canceled</p>
+                    </div>
+                </div>
+            </a>
+            <code class="prettyprint">
+                &nbsp;//是否拥有.z-liked点击后增加ani-like-FadeOut或ani-like-FadeIn，鼠标按下增加z-active类来进行话语变化，鼠标移开或者弹起的时候取消<br>
+                &lt;a href="javascript:;" role="button" class="ui-like"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="icon"&gt;&lt;/i&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="ui-like-tips-wrap"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="ui-tooltips ui-tooltips-arrows-top"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="text like"&gt;Like&lt;/p&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="text liked"&gt;Liked&lt;/p&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="text unliked"&gt;Unliked&lt;/p&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="text canceled"&gt;Canceled&lt;/p&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                &lt;/a&gt;<br><br>
+                &lt;a href="javascript:;" role="button" class="ui-like z-liked"&gt;//已喜欢增加.z-liked类<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="icon"&gt;&lt;/i&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="ui-like-tips-wrap"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="ui-tooltips ui-tooltips-arrows-top"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="text like"&gt;Like&lt;/p&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="text liked"&gt;Liked&lt;/p&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="text unliked"&gt;Unliked&lt;/p&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="text canceled"&gt;Canceled&lt;/p&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                &lt;/a&gt;<br>
+            </code>
+            <h2>4、下拉列表</h2>
+            <div class="ui-dropdown">
+                <strong data-value="1" class="ui-dropdown-curr">1</strong>
+                <ul class="ui-dropdown-list">
+                    <li data-value="1" role="button">1</li>
+                    <li data-value="2" role="button">2</li>
+                    <li data-value="3" role="button">3</li>
+                    <li data-value="4" role="button">4</li>
+                    <li data-value="5" role="button">5</li>
+                    <li data-value="6" role="button">6</li>
+                    <li data-value="7" role="button">7</li>
+                    <li data-value="8" role="button">8</li>
+                    <li data-value="9" role="button">9</li>
+                    <li data-value="10" role="button">10</li>
+                </ul>
+            </div>
+            <code class="prettyprint">
+                &lt;div class="ui-dropdown"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;strong data-value="1" class="ui-dropdown-curr"&gt;1&lt;/strong&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class="ui-dropdown-list"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li data-value="1" role="button"&gt;1&lt;/li&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li data-value="2" role="button"&gt;2&lt;/li&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li data-value="3" role="button"&gt;3&lt;/li&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li data-value="4" role="button"&gt;4&lt;/li&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li data-value="5" role="button"&gt;5&lt;/li&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li data-value="6" role="button"&gt;6&lt;/li&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li data-value="7" role="button"&gt;7&lt;/li&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li data-value="8" role="button"&gt;8&lt;/li&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li data-value="9" role="button"&gt;9&lt;/li&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li data-value="10" role="button"&gt;10&lt;/li&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+                &lt;/div&gt;<br>
+            </code>
+            <h2>5、弹窗</h2>
+            <button class="ui-btn-medium ui-btn-secondary" data-touch id="pop">按我弹出弹窗</button>
+            <div class="ui-pops">
+                <div class="ui-pops-inner">
+                    <a href="javascript:;" role="button" class="close">&times;</a>
+                    <h3 class="title"><i class="iconfont-warning iconfont"></i>Title</h3>
+                    <p class="text">text here text heretext here</p>
+                    <p class="btn-wrap"><button class="ui-btn-medium ui-btn-secondary" data-touch>OK</button><button class="ui-btn-medium ui-btn-default" data-touch>Cancel</button></p>
+                </div>
+            </div>
+            <code class="prettyprint">
+                &lt;div class="ui-pops"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="ui-pops-inner"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="javascript:;" role="button" class="close"&gt;&amp;times;&lt;/a&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3 class="title"&gt;&lt;i class="iconfont-warning iconfont"&gt;&lt;/i&gt;Title&lt;/h3&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="text"&gt;text here text heretext here&lt;/p&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="btn-wrap"&gt;&lt;button class="ui-btn-medium ui-btn-secondary" data-touch&gt;OK&lt;/button&gt;&lt;button class="ui-btn-medium ui-btn-default" data-touch&gt;Cancel&lt;/button&gt;&lt;/p&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                &lt;/div&gt;<br>
+            </code>
+            <h2>6、输入框</h2>
+            <input type="text" class="ui-ipt" placeholder="input text"><br><br>
+            <input type="password" class="ui-ipt"><br><br>
+            <input type="text" class="ui-ipt" placeholder="input text" disabled><br><br>
+            <code class="prettyprint">
+                &lt;input type="text" class="ui-ipt" placeholder="input text"&gt;//普通输入框<br>
+                &lt;input type="password" class="ui-ipt"&gt;//type变成password就是密码输入框<br>
+                &lt;input type="text" class="ui-ipt" placeholder="input text" disabled&gt;//不可点击输入框增加disabled属性
+            </code>
+            <div class="ui-ipt-group">
+                <input class="ui-ipt">
+                <button class="ui-btn-medium ui-btn-secondary" data-touch>
+                    <span class="txt">OK</span>
+                    <span class="ui-btn-loading"></span>
+                </button>
+            </div><br>
+            <div class="ui-ipt-group z-disabled">
+                <input class="ui-ipt J-ui-ipt" disabled>
+                <button class="ui-btn-medium ui-btn-secondary" data-touch>
+                    <span class="txt">OK</span>
+                    <span class="ui-btn-loading"></span>
+                </button>
+            </div><br>
+            <div class="ui-ipt-group z-loading">
+                <input class="ui-ipt J-ui-ipt" value="input textinput text" disabled>
+                <button class="ui-btn-medium ui-btn-secondary" data-touch>
+                    <span class="txt">OK</span>
+                    <span class="ui-btn-loading"></span>
+                </button>
+            </div><br>
+            <code class="prettyprint">
+                &lt;div class="ui-ipt-group"&gt;//默认状态<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;input class="ui-ipt"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="ui-btn-medium ui-btn-secondary" data-touch&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="txt"&gt;OK&lt;/span&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="ui-btn-loading"&gt;&lt;/span&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;<br>
+                &lt;/div&gt;<br>
+                &lt;div class="ui-ipt-group z-disabled"&gt;//添加状态类 'z-disabled'，在其子 'J-ui-ipt' 添加属性 'disabled'<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;input class="ui-ipt J-ui-ipt" disabled&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="ui-btn-medium ui-btn-secondary" data-touch&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="txt"&gt;OK&lt;/span&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="ui-btn-loading"&gt;&lt;/span&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;<br>
+                &lt;/div&gt;<br>
+                &lt;div class="ui-ipt-group z-loading"&gt;// 添加状态类 'z-loading'，在其子 'J-ui-ipt' 添加属性 'disabled'<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;input class="ui-ipt J-ui-ipt" value="input textinput text" disabled&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="ui-btn-medium ui-btn-secondary" data-touch&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="txt"&gt;OK&lt;/span&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="ui-btn-loading"&gt;&lt;/span&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;<br>
+                &lt;/div&gt;<br>
+            </code>
+            <div class="ui-form-item z-error">
+                <div class="ui-form-control">
+                    <input id="test" class="ui-ipt">
+                    <div class="ui-tooltips-warning ui-tooltips-arrows-bottom">
+                        <p class="ui-tiptext-warning">
+                            <i class="iconfont iconfont-16"></i>Please enter a valid e-mail address
+                        </p>
+                    </div>
+                </div>
+            </div><br>
+            <div class="ui-form-item z-success">
+                <div class="ui-form-control">
+                    <input id="test" class="ui-ipt">
+                    <i class="iconfont iconfont-16 iconfont-success"></i>
+                </div>
+            </div>
+            <code class="prettyprint">
+                &lt;div class="ui-form-item ui-form-item-error"&gt;//增加.z-error类显示.ui-tooltips-warning提示<br>
+                //需要有标题的input自行增加标签，样式由于多种多样请自行增加，for example:&lt;label for="test"&gt;label text&lt;/label&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="ui-form-control"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input id="test" class="ui-ipt"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="ui-tooltips-warning ui-tooltips-arrows-bottom"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="ui-tiptext-warning"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="iconfont iconfont-16"&gt;&lt;/i&gt;Please enter a valid e-mail address <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                &lt;/div&gt;<br>
+                &lt;div class="ui-form-item ui-form-item-success"&gt;//增加.z-success类显示.iconfont提示<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="test"&gt;label text&lt;/label&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="ui-form-control"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input id="test" class="ui-ipt"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="iconfont iconfont-16 iconfont-success"&gt;&lt;/i&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                &lt;/div&gt;<br>
+            </code>
+        </div>
+    </div>
+    <footer class="g-footer" role="contentinfo">
+        <div class="g-wrap">
+        </div>
+    </footer>
+    <aside class="g-sidebar"></aside>
+    <script>
+        $('[data-touch]').on('touchstart', function() {
+            $(this).addClass('touch');
+        }).on('touchend', function() {
+            $(this).removeClass('touch');
+        });
+        $(".test-btn").on('click', function() {
+            $(this).addClass('ui-btn-disabled').prop('disabled',true)
+        });
+        $(".ui-like").on('click', function() {
+            var $this=$(this);
+            $this.hasClass('z-liked')?$this.addClass('ani-like-FadeOut'):$this.addClass('ani-like-FadeIn')
+            $this.toggleClass('z-liked')
+            setTimeout(function  () {
+                $this.removeClass('ani-like-FadeIn ani-like-FadeOut')
+            },1000)
+        }).on('mousedown', function() {
+            $(this).addClass('z-active')
+        }).on('mouseout mouseup', function() {
+            $(this).removeClass('z-active')
+        });
+        $('.ui-dropdown-curr').on('click', function() {
+            $(this).parent().addClass('z-open')
+        });
+        $("#pop").on('click', function() {
+            !$('.ui-pops-mask').length && $('body').append($('<div class="ui-pops-mask"></div>'))
+            $('.ui-pops-mask').show()
+            $(".ui-pops").addClass('ani-pops-in')
+        });
+        $(".ui-pops .close").on('click', function() {
+            $(".ui-pops").removeClass('ani-pops-in')
+            $('.ui-pops-mask').hide()
+        });
+    </script>
+</body>
+</html>

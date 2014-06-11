@@ -1,0 +1,60 @@
+// @use : abroad my drop down
+// @editor : mss.huang
+// @last modified time : 2014.6.9
+// @verson : 1.0
+
+.ui-dropdown
+    position relative
+    width 70px
+    line-height 29px
+    background #fff
+    text-indent 20px
+    font-size 14px
+    color #272525
+    cursor pointer
+    user-select none
+    &.z-open
+        .ui-dropdown-curr
+            border-color #a2a1a1
+        .ui-dropdown-list
+            visibility visible
+
+.ui-dropdown-curr
+    display block
+    border 1px solid #7f7e80
+    padding 4px 0
+    font-weight normal
+    &:after
+        position absolute
+        right 8px
+        top 15px
+        content ''
+        border-width 5px
+        border-color #272525 transparent transparent
+        border-style solid
+        height 0
+        overflow hidden
+
+.ui-dropdown-list
+    position absolute
+    width 100%
+    margin-top -1px
+    border 1px solid #a2a1a1
+    max-height 302px
+    overflow auto
+    visibility hidden
+    li
+        background-color #fff
+        border-bottom 1px solid #e2e2e0
+        &:hover
+            color #fff
+            background-color #7f7f7f
+        &:active
+            color #fff
+            background-color #f10280
+    &::-webkit-scrollbar
+        width 3px
+        margin-left 10px
+    &::-webkit-scrollbar-thumb
+        border-radius 2px
+        background-color #dbd9d9

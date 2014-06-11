@@ -1,0 +1,231 @@
+/* ============================================================================
+   Tooltips
+   ========================================================================== */
+
+// variables
+$tooltips-spacing ?= 3px 15px
+$tooltips-border-radius ?= 3px
+
+$tooltips
+    position relative
+    padding $tooltips-spacing
+    border-width 1px
+    border-style solid
+    word-break break-all
+    .text
+        position relative
+        z-index 2
+    .ui-tips-info
+    .ui-tips-success
+    .ui-tips-warning
+    .ui-tips-error
+        margin-left -5px
+
+    // Commons Arrows
+    &-arrows-top
+    &-arrows-right
+    &-arrows-bottom
+    &-arrows-left
+        display none
+        position absolute
+        border-radius $tooltips-border-radius
+
+        &:before
+        &:after
+            position absolute
+            square(12px)
+            content '◆'
+            font normal 12px/12px unquote('\5B8B\4F53'), 'Hiragino Sans GB'
+            z-index 0
+        &:before
+            z-index -1
+
+    // Top Arrows
+    &.ui-tooltips-arrows-top
+        &:before
+        &:after
+            top -3px
+            left 50%
+            margin-left -6px
+        &:before
+            top -5px
+
+    // Right Arrows
+    &.ui-tooltips-arrows-right
+        &:before
+        &:after
+            top 50%
+            right -4px
+            margin-top -5px
+        &:before
+            right -6px
+
+    // Bottom Arrows
+    &.ui-tooltips-arrows-bottom
+        &:before
+        &:after
+            bottom -4px
+            left 50%
+            margin-left -6px
+        &:before
+            bottom -6px
+
+
+    // Left Arrows
+    &.ui-tooltips-arrows-left
+        &:before
+        &:after
+            top 50%
+            left -4px
+            margin-top -5px
+        &:before
+            left -6px
+
+    // Close button
+    .ui-button-close
+        &
+        &:hover
+        &:active
+            position absolute
+            top 5px
+            right 5px
+            font 13px/8px Arial
+            color #a6a5a5
+            text-decoration none
+
+
+/**
+ * Tooltips default
+ */
+
+// variables
+$tooltips-font-color ?= #333
+$tooltips-background-color ?= #fff
+$tooltips-border-color ?= #dbdada
+$tooltips-border-radius ?= 3px
+$tooltips-box-shadow ?= rgba(0, 0, 0, .15)
+
+$tooltips-arrow-border-color ?= $tooltips-border-color
+$tooltips-arrow-background-color ?= $tooltips-background-color
+$tooltips-arrow-text-shadow ?= rgba(0, 0, 0, .1)
+
+.ui-tooltips
+    @extend $tooltips
+    color $tooltips-font-color
+    border-color $tooltips-border-color
+    background-color $tooltips-background-color
+    box-shadow 0 0 3px $tooltips-box-shadow
+    &:before
+        color $tooltips-arrow-border-color
+    &:after
+        color $tooltips-arrow-background-color
+
+    // Top Arrows
+    &.tooltips-arrows-top
+    &:before
+        text-shadow 0 -1px 2px $tooltips-arrow-text-shadow
+
+    // Right Arrows
+    &.tooltips-arrows-right
+        &:before
+            text-shadow 1px 0 3px $tooltips-arrow-text-shadow
+
+    // Bottom Arrows
+    &.tooltips-arrows-bottom
+        &:before
+            text-shadow 0 1px 2px $tooltips-arrow-text-shadow
+
+
+    // Left Arrows
+    &.tooltips-arrows-left
+        &:before
+            text-shadow -1px 0 3px $tooltips-arrow-text-shadow
+
+
+/**
+ * Tooltips Info
+ */
+
+// variables
+$tooltips-info-background-color ?= #dff1f8
+$tooltips-info-border-color ?= #b4e1f3
+
+$tooltips-info-arrow-border-color ?= $tooltips-info-border-color
+$tooltips-info-arrow-background-color ?= $tooltips-info-background-color
+
+
+.ui-tooltips-info
+    @extend $tooltips
+    background-color $tooltips-info-background-color
+    border-color $tooltips-info-border-color
+
+    &:before
+        color $tooltips-info-arrow-border-color
+    &:after
+        color $tooltips-info-arrow-background-color
+
+
+/**
+ * Tooltips Warning
+ */
+
+// variables
+$tooltips-warning-background-color ?= #fffaf3;
+$tooltips-warning-border-color ?= #f8dbb1
+
+$tooltips-warning-arrow-border-color ?= $tooltips-warning-border-color
+$tooltips-warning-arrow-background-color ?= $tooltips-warning-background-color
+
+.ui-tooltips-warning
+    @extend $tooltips
+    background-color $tooltips-warning-background-color
+    border-color $tooltips-warning-border-color
+
+    &:before
+        color $tooltips-warning-arrow-border-color
+    &:after
+        color $tooltips-warning-arrow-background-color
+
+
+/**
+ * Tooltips Error
+ */
+
+// variables
+$tooltips-error-background-color ?= #f4e5e5
+$tooltips-error-border-color ?= #ebced0
+
+$tooltips-error-arrow-border-color ?= $tooltips-error-border-color
+$tooltips-error-arrow-background-color ?= $tooltips-error-background-color
+
+.ui-tooltips-error
+    @extend $tooltips
+    background-color $tooltips-error-background-color
+    border-color $tooltips-error-border-color
+
+    &:before
+        color $tooltips-error-arrow-border-color
+    &:after
+        color $tooltips-error-arrow-background-color
+
+
+/**
+ * Tooltips Success
+ */
+
+// variables
+$tooltips-success-background-color ?= #dff2d9
+$tooltips-success-border-color ?= #c1e0af
+
+$tooltips-success-arrow-border-color ?= $tooltips-success-border-color
+$tooltips-success-arrow-background-color ?= $tooltips-success-background-color
+
+.ui-tooltips-success
+    @extend $tooltips
+    background-color $tooltips-success-background-color
+    border-color $tooltips-success-border-color
+
+    &:before
+        color $tooltips-success-arrow-border-color
+    &:after
+        color $tooltips-success-arrow-background-color
