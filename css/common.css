@@ -274,8 +274,14 @@ button {
   coontent: '\e60b';
 }
 
+，Arial，sans-serif,
+font-special = Georgia，serif,
 *,
+，Arial，sans-serif:before,
+font-special = Georgia，serif:before,
 *:before,
+，Arial，sans-serif:after,
+font-special = Georgia，serif:after,
 *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -283,7 +289,7 @@ button {
 }
 
 body {
-  font: 12px/1.5 Helvetica, Arial, sans-serif;
+  font: 12px/1.5 Helvetica;
   color: #333;
   min-width: 1000px;
   overflow-x: hidden;
@@ -994,7 +1000,7 @@ a:hover {
 .ui-tooltips-error,
 .ui-tooltips-success {
   position: relative;
-  padding: 3px 15px;
+  padding: 6px 15px;
   border-width: 1px;
   border-style: solid;
   word-break: break-all;
@@ -1448,8 +1454,6 @@ a:hover {
   position: relative;
   background-color: #fff;
   padding: 35px 40px;
-  font-size: 14px;
-  text-align: center;
 }
 
 .ui-modal-inner .close {
@@ -1464,20 +1468,25 @@ a:hover {
   text-decoration: none;
 }
 
-.ui-modal-inner .btn-wrap {
+.ui-modal-confirm {
+  font-size: 14px;
+  text-align: center;
+}
+
+.ui-modal-confirm .btn-wrap {
   margin-top: 25px;
 }
 
-.ui-modal-inner .btn-wrap button,
-.ui-modal-inner .btn-wrap a {
+.ui-modal-confirm .btn-wrap button,
+.ui-modal-confirm .btn-wrap a {
   margin: 0 8px;
 }
 
-.ui-modal-inner .title {
+.ui-modal-confirm .title {
   line-height: 48px;
 }
 
-.ui-modal-inner .title .iconfont {
+.ui-modal-confirm .title .iconfont {
   vertical-align: middle;
   margin-right: 5px;
 }
@@ -1498,6 +1507,7 @@ a:hover {
   z-index: 50;
   background-color: #000;
   opacity: 0.5;
+  filter: alpha(opacity=50);
   width: 100%;
   height: 100%;
 }
