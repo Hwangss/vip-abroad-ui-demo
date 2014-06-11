@@ -119,11 +119,11 @@
                 </div><br><br>
                 <div class="ui-tooltips-success ui-tooltips-arrows-top" style="width:300px;">
                     <p class="ui-tips-success"><i class="iconfont iconfont-16"></i>tip text</p>
-                    <a class="ui-button-close" href="javascript:;" rel="nofollow" role="button">&times;</a>
+                    <a class="close" href="javascript:;" rel="nofollow" role="button">&times;</a>
                 </div><br><br>
                 <div class="ui-tooltips-success" style="width:300px;">
                     <p class="ui-tips-success"><i class="iconfont iconfont-16"></i>tip text</p>
-                    <a class="ui-button-close" href="javascript:;" rel="nofollow" role="button">&times;</a>
+                    <a class="close" href="javascript:;" rel="nofollow" role="button">&times;</a>
                 </div><br>
                 <p class="ui-tips-success"><i class="iconfont iconfont-16"></i>tip text</p>
             </div>
@@ -145,11 +145,11 @@
                 &lt;/div&gt;<br>
                 &lt;div class="ui-tooltips-success ui-tooltips-arrows-top" style="width:300px;"&gt;//宽度请自行添加否则自适应<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="ui-tiptext-success"&gt;&lt;i class="iconfont iconfont-16"&gt;&lt;/i&gt;tip text&lt;/p&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="ui-button-close" href="javascript:;" rel="nofollow" role="button"&gt;&amp;times;&lt;/a&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="close" href="javascript:;" rel="nofollow" role="button"&gt;&amp;times;&lt;/a&gt;<br>
                 &lt;/div&gt;<br>
                 &lt;div class="ui-tooltips-success" style="width:300px;"&gt;//宽度请自行添加否则自适应，不要箭头就取消类<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="ui-tips-success"&gt;&lt;i class="iconfont iconfont-16"&gt;&lt;/i&gt;tip text&lt;/p&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="ui-button-close" href="javascript:;" rel="nofollow" role="button"&gt;&amp;times;&lt;/a&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="close" href="javascript:;" rel="nofollow" role="button"&gt;&amp;times;&lt;/a&gt;<br>
                 &lt;/div&gt;&lt;br&gt;<br>
                 &lt;p class="ui-tips-success"&gt;&lt;i class="iconfont iconfont-16"&gt;&lt;/i&gt;tip text&lt;/p&gt;//外边框不要的话只需要用里面的内容单独存在<br>
             </code>
@@ -217,6 +217,21 @@
                     <li data-value="9" role="button">9</li>
                     <li data-value="10" role="button">10</li>
                 </ul>
+            </div><br>
+            <div class="ui-dropdown z-disabled">
+                <strong data-value="1" class="ui-dropdown-curr">1</strong>
+                <ul class="ui-dropdown-list">
+                    <li data-value="1" role="button">1</li>
+                    <li data-value="2" role="button">2</li>
+                    <li data-value="3" role="button">3</li>
+                    <li data-value="4" role="button">4</li>
+                    <li data-value="5" role="button">5</li>
+                    <li data-value="6" role="button">6</li>
+                    <li data-value="7" role="button">7</li>
+                    <li data-value="8" role="button">8</li>
+                    <li data-value="9" role="button">9</li>
+                    <li data-value="10" role="button">10</li>
+                </ul>
             </div>
             <code class="prettyprint">
                 &lt;div class="ui-dropdown"&gt;<br>
@@ -234,11 +249,27 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li data-value="10" role="button"&gt;10&lt;/li&gt;<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
                 &lt;/div&gt;<br>
+
+                &lt;div class="ui-dropdown z-disabled"&gt;//不可点击时增加z-disabled类<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;strong data-value="1" class="ui-dropdown-curr"&gt;1&lt;/strong&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class="ui-dropdown-list"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li data-value="1" role="button"&gt;1&lt;/li&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li data-value="2" role="button"&gt;2&lt;/li&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li data-value="3" role="button"&gt;3&lt;/li&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li data-value="4" role="button"&gt;4&lt;/li&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li data-value="5" role="button"&gt;5&lt;/li&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li data-value="6" role="button"&gt;6&lt;/li&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li data-value="7" role="button"&gt;7&lt;/li&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li data-value="8" role="button"&gt;8&lt;/li&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li data-value="9" role="button"&gt;9&lt;/li&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li data-value="10" role="button"&gt;10&lt;/li&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+                &lt;/div&gt;<br>
             </code>
             <h2>5、弹窗</h2>
-            <button class="ui-btn-medium ui-btn-secondary" data-touch id="pop">按我弹出弹窗</button>
-            <div class="ui-pops">
-                <div class="ui-pops-inner">
+            <button class="ui-btn-medium ui-btn-secondary" data-touch id="modal">按我弹出弹窗</button>
+            <div class="ui-modal">
+                <div class="ui-modal-inner">
                     <a href="javascript:;" role="button" class="close">&times;</a>
                     <h3 class="title"><i class="iconfont-warning iconfont"></i>Title</h3>
                     <p class="text">text here text heretext here</p>
@@ -246,8 +277,8 @@
                 </div>
             </div>
             <code class="prettyprint">
-                &lt;div class="ui-pops"&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="ui-pops-inner"&gt;<br>
+                &lt;div class="ui-modal"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="ui-modal-inner"&gt;<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="javascript:;" role="button" class="close"&gt;&amp;times;&lt;/a&gt;<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3 class="title"&gt;&lt;i class="iconfont-warning iconfont"&gt;&lt;/i&gt;Title&lt;/h3&gt;<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="text"&gt;text here text heretext here&lt;/p&gt;<br>
@@ -375,14 +406,14 @@
         $('.ui-dropdown-curr').on('click', function() {
             $(this).parent().addClass('z-open')
         });
-        $("#pop").on('click', function() {
-            !$('.ui-pops-mask').length && $('body').append($('<div class="ui-pops-mask"></div>'))
-            $('.ui-pops-mask').show()
-            $(".ui-pops").addClass('ani-pops-in')
+        $("#modal").on('click', function() {
+            !$('.ui-modal-mask').length && $('body').append($('<div class="ui-modal-mask"></div>'))
+            $('.ui-modal-mask').show()
+            $(".ui-modal").addClass('ani-modal-in')
         });
-        $(".ui-pops .close").on('click', function() {
-            $(".ui-pops").removeClass('ani-pops-in')
-            $('.ui-pops-mask').hide()
+        $(".ui-modal .close").on('click', function() {
+            $(".ui-modal").removeClass('ani-modal-in')
+            $('.ui-modal-mask').hide()
         });
     </script>
 </body>
