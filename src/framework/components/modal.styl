@@ -1,68 +1,208 @@
-// @use : abroad my modal
+// @use : abroad ui button
 // @editor : mss.huang
-// @last modified time : 2014.6.10
+// @last modified time : 2014.6.5
 // @verson : 1.0
 
-/* ============================================================================
-   Forms
-   @require Button '/framework/components/button.styl'
-   ========================================================================== */
+// var
+// common
+$button-border-width ?= 1px
+$button-border-style ?= solid
+// primary button
+$button-primary-color ?= #fff
+$button-primary-backgroundColor ?= #f10180
+$button-primary-borderColor ?= #f10180
+$button-primary-backgroundColor-hover ?= #f43499
+$button-primary-borderColor-hover ?= #f43499
+$button-primary-backgroundColor-active ?= #d80173
+$button-primary-borderColor-active ?= #d80173
+// secondary button
+$button-secondary-color ?= #e00078
+$button-secondary-backgroundColor ?= #fcedf2
+$button-secondary-borderColor ?= #ffbde0
+$button-secondary-backgroundColor-hover ?= #fcf5f7
+$button-secondary-backgroundColor-active ?= #fcdee8
+// default button
+$button-default-color ?= #333
+$button-default-backgroundColor ?= #fafafa
+$button-default-borderColor ?= #c2c2c2
+$button-default-backgroundColor-hover ?= #fff
+$button-default-backgroundColor-active ?= #f0f0f0
+// disabled button
+$button-disabled-color ?= #9b9b9b
+$button-disabled-backgroundColor ?= #d0d0d0
+$button-disabled-borderColor ?= #d0d0d0
 
-.ui-modal
-    position fixed
-    z-index 100
-    top 30%
-    left 50%
-    width 310px
-    padding 5px
-    margin-left -155px
-    background rgba(255,255,255,.5)
-    filter s('progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7fffffff, endcolorstr=#7fffffff)')
-    opacity 0
-    visibility hidden
-    transform translateY(-20px)
-    transition .5s
-:root .ui-modal
-    filter none
-
-.ui-modal-inner
-    position relative
-    background-color #fff
-    padding 35px 40px
-    font-size 14px
+// function
+$button-common
+    display inline-block
+    overflow visible
     text-align center
-    .close
-        position absolute
-        top 8px
-        right 10px
-        font 22px/1 tahoma
-        color #b8b8b8
-        &:hover
-            text-decoration none
-    .btn-wrap
-        margin-top 25px
-        button
-        a
-            margin 0 8px
-    .title
-        line-height 48px
-        .iconfont
-            vertical-align middle
-            margin-right 5px
+    border-radius 3px
+    transition-duration .3s
+    border-width $button-border-width
+    border-style $button-border-style
+    // A tag
+    &:hover
+        text-decoration none
 
-// animation pop fade
-.ani-modal-in
-    opacity 1
-    visibility visible
-    transform translateY(0)
+// animation
+@keyframes loadingShow{
+    0% {
+        transform translate(0,-42px)
+    }
+    100% {
+        transform translate(0,0)
+    }
+}
 
-.ui-modal-mask
-    display none
-    position fixed
+@keyframes txtHide{
+    0% {
+        transform translate(0,0)
+    }
+    100% {
+        transform translate(0,100%)
+    }
+}
+
+// btn layout
+.ui-btn-large
+    @extends $button-common
+    min-width 148px
+    padding 0 48px
+    font-size 18px
+    line-height 40px
+    overflow hidden
+    &.ui-btn-disabled
+        position relative
+        .txt
+            display inline-block
+            animation txtHide .8s
+        .ui-btn-loading
+            display inline-block
+            animation loadingShow .6s
+
+.ui-btn-medium
+    @extends $button-common
+    min-width 78px
+    padding 0 18px
+    font-size 14px
+    line-height 28px
+    overflow hidden
+    &.ui-btn-disabled
+        position relative
+        .txt
+            display inline-block
+            animation txtHide .8s
+        .ui-btn-loading
+            display inline-block
+            animation loadingShow .6s
+
+.ui-btn-small
+    @extends $button-common
+    min-width 50px
+    padding 0 8px
+    font-size 12px
+    line-height 21px
+    overflow hidden
+    &.ui-btn-disabled
+        position relative
+        .txt
+            display inline-block
+            animation txtHide .8s
+        .ui-btn-loading
+            display inline-block
+            animation loadingShow .6s
+
+.ui-btn-mini
+    @extends $button-common
+    min-width 44px
+    padding 0 10px
+    font-size 12px
+    line-height 18px
+    overflow hidden
+    &.ui-btn-disabled
+        position relative
+        .txt
+            display inline-block
+            animation txtHide .8s
+        .ui-btn-loading
+            display inline-block
+            animation loadingShow .6s
+
+// btn loading 
+.ui-btn-loading
+    position absolute
     left 0
     top 0
-    z-index 50
-    background-color #000
-    opacity .5
     width 100%
     height 100%
+    display none
+    background-color $button-disabled-backgroundColor
+    &:before
+        content ''
+        display inline-block
+        vertical-align middle
+        width 16px
+        height 16px
+        background url('{$imgDomain}/abroad/common/ui-loading-gray.gif') no-repeat
+    em
+        display inline-block
+        vertical-align middle
+        margin-left 8px
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min--moz-device-pixel-ratio: 2),
+        only screen and (-o-min-device-pixel-ratio: 2/1),
+        only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and (min-resolution: 2dppx){
+    .ui-btn-loading:before {
+        background-image url('{$imgDomain}/abroad/common/ui-loading-gray@2x.gif')
+        background-size 16px 16px
+    }
+}
+
+// btn skin
+.ui-btn-primary
+    color $button-primary-color
+    background-color $button-primary-backgroundColor
+    border-color $button-primary-borderColor
+    .device-pc &:hover
+        background-color $button-primary-backgroundColor-hover
+        border-color $button-primary-borderColor-hover
+    .device-pc &:active
+    &.touch
+        background-color $button-primary-backgroundColor-active
+        border-color $button-primary-borderColor-active
+
+.ui-btn-secondary
+    color $button-secondary-color
+    background-color $button-secondary-backgroundColor
+    border-color $button-secondary-borderColor
+    .device-pc &:hover
+        background-color $button-secondary-backgroundColor-hover
+    .device-pc &:active
+    &.touch
+        background-color $button-secondary-backgroundColor-active
+
+.ui-btn-default
+    color $button-default-color
+    background-color $button-default-backgroundColor
+    border-color $button-default-borderColor
+    .device-pc &:hover
+        background-color $button-default-backgroundColor-hover
+    .device-pc &:active
+    &.touch
+        background-color $button-default-backgroundColor-active
+
+// btn disabled
+.ui-btn-disabled
+    color $button-disabled-color
+    cursor not-allowed
+    transition none
+    &
+    .device-pc &:hover
+    .device-pc &:active
+    &.touch
+        background-color $button-disabled-backgroundColor
+        border-color $button-disabled-borderColor
