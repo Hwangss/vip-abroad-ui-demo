@@ -271,17 +271,11 @@ button {
 }
 
 .iconfont-plus:before {
-  coontent: '\e60b';
+  content: '\e60b';
 }
 
-，Arial，sans-serif,
-font-special = Georgia，serif,
 *,
-，Arial，sans-serif:before,
-font-special = Georgia，serif:before,
 *:before,
-，Arial，sans-serif:after,
-font-special = Georgia，serif:after,
 *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -289,10 +283,11 @@ font-special = Georgia，serif:after,
 }
 
 body {
-  font: 12px/1.5 Helvetica;
+  font: 12px/1.5 Helvetica, Arial, sans-serif;
   color: #333;
   min-width: 1000px;
   overflow-x: hidden;
+  word-wrap: break-word;
 }
 
 a {
@@ -322,6 +317,13 @@ a:hover {
   transition-duration: 0.3s;
   border-width: 1px;
   border-style: solid;
+}
+
+.ui-btn-large:hover,
+.ui-btn-medium:hover,
+.ui-btn-small:hover,
+.ui-btn-mini:hover {
+  text-decoration: none;
 }
 
 .ui-btn-large {
@@ -1349,6 +1351,10 @@ a:hover {
   user-select: none;
 }
 
+.ui-dropdown.z-open {
+  z-index: 10;
+}
+
 .ui-dropdown.z-open .ui-dropdown-curr {
   border-color: #a2a1a1;
 }
@@ -1392,6 +1398,7 @@ a:hover {
 
 .ui-dropdown-list {
   position: absolute;
+  z-index: 101;
   width: 100%;
   margin-top: -1px;
   border: 1px solid #a2a1a1;
@@ -1428,7 +1435,7 @@ a:hover {
 
 .ui-modal {
   position: fixed;
-  z-index: 100;
+  z-index: 1001;
   top: 30%;
   left: 50%;
   width: 310px;
@@ -1504,7 +1511,7 @@ a:hover {
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 50;
+  z-index: 1000;
   background-color: #000;
   opacity: 0.5;
   filter: alpha(opacity=50);
