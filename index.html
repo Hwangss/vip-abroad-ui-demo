@@ -268,35 +268,36 @@
             </code>
             <h2>5、弹窗</h2>
             <button class="ui-btn-medium ui-btn-secondary" data-touch id="modal">按我弹出弹窗</button>
-            <div class="ui-modal">
-                <div class="ui-modal-inner">
-                    <a href="javascript:;" role="button" class="close">&times;</a>
+            <div class="ui-modal" style="left:45%;top:10%;">
+                <a href="javascript:;" role="button" class="ui-modal-close">&times;</a>
+                <div>
                     <h3 class="title"><i class="iconfont-warning iconfont"></i>Title</h3>
                     <p class="text">text here text heretext here</p>
                     <p class="btn-wrap"><button class="ui-btn-medium ui-btn-secondary" data-touch>OK</button><button class="ui-btn-medium ui-btn-default" data-touch>Cancel</button></p>
                 </div>
             </div>
-            <div class="ui-modal" style="margin-top:200px;">
-                <div class="ui-modal-inner ui-modal-confirm">
-                    <a href="javascript:;" role="button" class="close">&times;</a>
+            <div class="ui-modal" style="margin-top:200px;left:45%;top:10%;">
+                <a href="javascript:;" role="button" class="ui-modal-close">&times;</a>
+                <div class="ui-modal-confirm">
                     <h3 class="title"><i class="iconfont-warning iconfont"></i>Title</h3>
                     <p class="text">text here text heretext here</p>
                     <p class="btn-wrap"><button class="ui-btn-medium ui-btn-secondary" data-touch>OK</button><button class="ui-btn-medium ui-btn-default" data-touch>Cancel</button></p>
                 </div>
             </div>
             <code class="prettyprint">
+                &nbsp;//位置什么的默认都没的，插件自己搞掂啊<br>
                 &lt;div class="ui-modal"&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="ui-modal-inner"&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="javascript:;" role="button" class="close"&gt;&amp;times;&lt;/a&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="javascript:;" role="button" class="ui-modal-close"&gt;&amp;times;&lt;/a&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3 class="title"&gt;&lt;i class="iconfont-warning iconfont"&gt;&lt;/i&gt;Title&lt;/h3&gt;<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="text"&gt;text here text heretext here&lt;/p&gt;<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="btn-wrap"&gt;&lt;button class="ui-btn-medium ui-btn-secondary" data-touch&gt;OK&lt;/button&gt;&lt;button class="ui-btn-medium ui-btn-default" data-touch&gt;Cancel&lt;/button&gt;&lt;/p&gt;<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
                 &lt;/div&gt;<br>
                 &lt;div class="ui-modal"&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;//原本内容是没有任何样式的，内容由实际需求定义，但提供一个默认有的.ui-modal-confirm类作为确认样式<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="ui-modal-inner ui-modal-confirm"&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="javascript:;" role="button" class="close"&gt;&amp;times;&lt;/a&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="javascript:;" role="button" class="ui-modal-close"&gt;&amp;times;&lt;/a&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;//原本内容是没有任何样式的，内容由实际需求定义，但提供默认有的.ui-modal-confirm类作为确认样式<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="ui-modal-confirm"&gt;<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3 class="title"&gt;&lt;i class="iconfont-warning iconfont"&gt;&lt;/i&gt;Title&lt;/h3&gt;<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="text"&gt;text here text heretext here&lt;/p&gt;<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="btn-wrap"&gt;&lt;button class="ui-btn-medium ui-btn-secondary" data-touch&gt;OK&lt;/button&gt;&lt;button class="ui-btn-medium ui-btn-default" data-touch&gt;Cancel&lt;/button&gt;&lt;/p&gt;<br>
@@ -428,7 +429,7 @@
             $('.ui-modal-mask').show()
             $(".ui-modal").addClass('ani-modal-in')
         });
-        $(".ui-modal .close").on('click', function() {
+        $(".ui-modal-close").on('click', function() {
             $(".ui-modal").removeClass('ani-modal-in')
             $('.ui-modal-mask').hide()
         });
