@@ -1316,16 +1316,16 @@ a:hover {
 }
 
 .ui-tooltips-warning {
-  background-color: #fffaf3;
-  border-color: #f8dbb1;
+  background-color: #ffffd7;
+  border-color: #fc6;
 }
 
 .ui-tooltips-warning:before {
-  color: #f8dbb1;
+  color: #fc6;
 }
 
 .ui-tooltips-warning:after {
-  color: #fffaf3;
+  color: #ffffd7;
 }
 
 .ui-tooltips-error {
@@ -1412,6 +1412,7 @@ a:hover {
   border-width: 5px;
   border-color: #272525 transparent transparent;
   border-style: solid;
+  width: 0;
   height: 0;
   overflow: hidden;
 }
@@ -1456,11 +1457,7 @@ a:hover {
 .ui-modal {
   position: fixed;
   z-index: 1001;
-  top: 30%;
-  left: 50%;
-  width: 310px;
   padding: 5px;
-  margin-left: -155px;
   background: rgba(255,255,255,0.5);
   filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7fffffff, endcolorstr=#7fffffff);
   opacity: 0;
@@ -1472,32 +1469,31 @@ a:hover {
   transition: 0.5s;
 }
 
+.ui-modal .ui-modal-close {
+  position: absolute;
+  z-index: 10;
+  top: 13px;
+  right: 15px;
+  font: 22px/1 tahoma;
+  color: #b8b8b8;
+}
+
+.ui-modal .ui-modal-close:hover {
+  text-decoration: none;
+}
+
 :root .ui-modal {
   -webkit-filter: none;
   filter: none;
 }
 
-.ui-modal-inner {
-  position: relative;
-  background-color: #fff;
-  padding: 35px 40px;
-}
-
-.ui-modal-inner .close {
-  position: absolute;
-  top: 8px;
-  right: 10px;
-  font: 22px/1 tahoma;
-  color: #b8b8b8;
-}
-
-.ui-modal-inner .close:hover {
-  text-decoration: none;
-}
-
 .ui-modal-confirm {
   font-size: 14px;
   text-align: center;
+  position: relative;
+  background-color: #fff;
+  width: 300px;
+  padding: 35px 40px;
 }
 
 .ui-modal-confirm .btn-wrap {
