@@ -317,6 +317,10 @@ a:hover {
   text-decoration: underline;
 }
 
+.hidden {
+  display: none;
+}
+
 .g-wrap {
   width: 960px;
   margin-left: auto;
@@ -1273,8 +1277,6 @@ a:hover {
   color: #333;
   border-color: #dbdada;
   background-color: #fff;
-  -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.15);
-  box-shadow: 0 0 3px rgba(0,0,0,0.15);
 }
 
 .ui-tooltips:before {
@@ -1283,23 +1285,6 @@ a:hover {
 
 .ui-tooltips:after {
   color: #fff;
-}
-
-.ui-tooltips.tooltips-arrows-top,
-.ui-tooltips:before {
-  text-shadow: 0 -1px 2px rgba(0,0,0,0.1);
-}
-
-.ui-tooltips.tooltips-arrows-right:before {
-  text-shadow: 1px 0 3px rgba(0,0,0,0.1);
-}
-
-.ui-tooltips.tooltips-arrows-bottom:before {
-  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
-}
-
-.ui-tooltips.tooltips-arrows-left:before {
-  text-shadow: -1px 0 3px rgba(0,0,0,0.1);
 }
 
 .ui-tooltips-info {
@@ -1316,16 +1301,16 @@ a:hover {
 }
 
 .ui-tooltips-warning {
-  background-color: #ffffd7;
-  border-color: #fc6;
+  background-color: #fffaf3;
+  border-color: #f8dbb1;
 }
 
 .ui-tooltips-warning:before {
-  color: #fc6;
+  color: #f8dbb1;
 }
 
 .ui-tooltips-warning:after {
-  color: #ffffd7;
+  color: #fffaf3;
 }
 
 .ui-tooltips-error {
@@ -1359,7 +1344,6 @@ a:hover {
   width: 70px;
   line-height: 29px;
   background: #fff;
-  text-indent: 20px;
   font-size: 14px;
   color: #272525;
   cursor: pointer;
@@ -1399,7 +1383,7 @@ a:hover {
   position: relative;
   display: block;
   border: 1px solid #7f7e80;
-  padding: 4px 0;
+  padding: 4px 20px;
   font-weight: normal;
 }
 
@@ -1431,6 +1415,7 @@ a:hover {
 .ui-dropdown-list li {
   background-color: #fff;
   border-bottom: 1px solid #e2e2e0;
+  padding: 0 20px;
 }
 
 .ui-dropdown-list li:hover {
@@ -1444,6 +1429,10 @@ a:hover {
   background-color: #f10280;
 }
 
+.ui-dropdown-list li:last-of-type {
+  border-bottom: 0 none;
+}
+
 .ui-dropdown-list::-webkit-scrollbar {
   width: 3px;
   margin-left: 10px;
@@ -1454,12 +1443,10 @@ a:hover {
   background-color: #dbd9d9;
 }
 
-.ui-modal {
+.ui-modal,
+.ui-modal-shadow {
   position: fixed;
   z-index: 1001;
-  padding: 5px;
-  background: rgba(255,255,255,0.5);
-  filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7fffffff, endcolorstr=#7fffffff);
   opacity: 0;
   visibility: hidden;
   -webkit-transform: translateY(-20px);
@@ -1469,7 +1456,50 @@ a:hover {
   transition: 0.5s;
 }
 
-.ui-modal .ui-modal-close {
+.ui-modal {
+  padding: 5px;
+  background: rgba(255,255,255,0.5);
+  filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7fffffff, endcolorstr=#7fffffff);
+}
+
+.ui-modal-shadow {
+  border: 1px solid #e5e5e5;
+  -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.1);
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+}
+
+:root .ui-modal {
+  -webkit-filter: none;
+  filter: none;
+}
+
+.ui-modal-confirm0 {
+  font-size: 14px;
+  text-align: center;
+  background-color: #fff;
+  width: 300px;
+  padding: 35px 40px;
+}
+
+.ui-modal-confirm0 .btn-wrap {
+  margin-top: 25px;
+}
+
+.ui-modal-confirm0 .btn-wrap button,
+.ui-modal-confirm0 .btn-wrap a {
+  margin: 0 8px;
+}
+
+.ui-modal-confirm0 .title {
+  line-height: 48px;
+}
+
+.ui-modal-confirm0 .title .iconfont {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.ui-modal-close {
   position: absolute;
   z-index: 10;
   top: 13px;
@@ -1478,40 +1508,8 @@ a:hover {
   color: #b8b8b8;
 }
 
-.ui-modal .ui-modal-close:hover {
+.ui-modal-close:hover {
   text-decoration: none;
-}
-
-:root .ui-modal {
-  -webkit-filter: none;
-  filter: none;
-}
-
-.ui-modal-confirm {
-  font-size: 14px;
-  text-align: center;
-  position: relative;
-  background-color: #fff;
-  width: 300px;
-  padding: 35px 40px;
-}
-
-.ui-modal-confirm .btn-wrap {
-  margin-top: 25px;
-}
-
-.ui-modal-confirm .btn-wrap button,
-.ui-modal-confirm .btn-wrap a {
-  margin: 0 8px;
-}
-
-.ui-modal-confirm .title {
-  line-height: 48px;
-}
-
-.ui-modal-confirm .title .iconfont {
-  vertical-align: middle;
-  margin-right: 5px;
 }
 
 .ani-modal-in {
