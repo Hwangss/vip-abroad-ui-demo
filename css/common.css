@@ -164,6 +164,11 @@ button {
   overflow: visible;
 }
 
+em,
+i {
+  font-style: normal;
+}
+
 @font-face {
   font-family: 'vipFont';
   src: url("../fonts/vipFont.eot");
@@ -1473,7 +1478,7 @@ a:hover {
   filter: none;
 }
 
-.ui-modal-confirm0 {
+.ui-modal-confirm {
   font-size: 14px;
   text-align: center;
   background-color: #fff;
@@ -1481,21 +1486,21 @@ a:hover {
   padding: 35px 40px;
 }
 
-.ui-modal-confirm0 .btn-wrap {
+.ui-modal-confirm .btn-wrap {
   margin-top: 25px;
 }
 
-.ui-modal-confirm0 .btn-wrap button,
-.ui-modal-confirm0 .btn-wrap a {
+.ui-modal-confirm .btn-wrap button,
+.ui-modal-confirm .btn-wrap a {
   margin: 0 8px;
 }
 
-.ui-modal-confirm0 .title {
+.ui-modal-confirm .title {
   line-height: 48px;
 }
 
-.ui-modal-confirm0 .title .iconfont {
-  vertical-align: middle;
+.ui-modal-confirm .title .iconfont {
+  vertical-align: text-top;
   margin-right: 5px;
 }
 
