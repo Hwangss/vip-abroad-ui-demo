@@ -1413,7 +1413,7 @@ a:hover {
   margin-top: -1px;
   border: 1px solid #a2a1a1;
   max-height: 302px;
-  overflow: auto;
+  overflow-y: auto;
   visibility: hidden;
 }
 
@@ -1428,13 +1428,13 @@ a:hover {
   background-color: #7f7f7f;
 }
 
-.ui-dropdown-list li.selected,
+.ui-dropdown-list li.z-selected,
 .ui-dropdown-list li:active {
   color: #fff;
   background-color: #f10280;
 }
 
-.ui-dropdown-list li:last-of-type {
+.ui-dropdown-list li:last-child {
   border-bottom: 0 none;
 }
 
