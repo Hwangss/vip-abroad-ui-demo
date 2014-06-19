@@ -326,6 +326,16 @@ a:hover {
   display: none;
 }
 
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: ' ';
+}
+
+.clearfix:after {
+  clear: both;
+}
+
 .g-wrap {
   width: 960px;
   margin-left: auto;
